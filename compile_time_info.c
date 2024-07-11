@@ -10,5 +10,6 @@ printf(
 "        SELFGRAVITY_OFF\n"
 "        OUTPUT_IN_DOUBLEPRECISION\n"
 "        INPUT_IN_DOUBLEPRECISION\n"
+"        USE_MPI_IN_PLACE\n"
 "\n");
 }

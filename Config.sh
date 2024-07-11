@@ -613,7 +613,7 @@ INPUT_IN_DOUBLEPRECISION       # input files assumed to be in double precision (
 #GRAIN_RDI_TESTPROBLEM_LIVE_RADIATION_INJECTION # Enables idealized radiation injection by a source population designed to set up outflow test problems with live radiation-hydrodynamics as in Hopkins et al., arXiv:2107.04608. Cite that paper if this module is used.
 # --------------------
 # ----- MPI & Parallel-FFTW De-Bugging
-#USE_MPI_IN_PLACE               # MPI debugging: makes AllGatherV compatible with MPI_IN_PLACE definitions in some MPI libraries
+USE_MPI_IN_PLACE               # MPI debugging: makes AllGatherV compatible with MPI_IN_PLACE definitions in some MPI libraries
 #NO_ISEND_IRECV_IN_DOMAIN       # MPI debugging: slower, but fixes memory errors during exchange in the domain decomposition (ANY RUN with >2e9 particles MUST SET THIS OR FAIL!)
 #FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG # MPI debugging
 #MPISENDRECV_SIZELIMIT=100      # MPI debugging: force all MPI_Sendrecv calls to use the "size-limited" version which checks for the minimum of int, buffersize, or this value in MB as the maximum number of bytes it can send/receive (otherwise it breaks it into chunks). should never hurt, just gives slightly slower communication calls because of the extra checks.
